@@ -19,7 +19,7 @@ sudo nala install git  -y
 
 #############################################################################################################
 ## Download CTT Script
-git clone https://github.com/ChrisTitusTech/debian-titus
+#git clone https://github.com/ChrisTitusTech/debian-titus
 cd debian-titus
 sudo ./install.sh
 
@@ -35,7 +35,7 @@ echo "===================="
 echo "Select VIMIX" 
 echo "===================="
 
-git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+#git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
 cd Top-5-Bootloader-Themes
 sudo ./install.sh
 
