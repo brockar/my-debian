@@ -1,0 +1,14 @@
+[Unit]
+Description=rclonemount
+After=multi-user.target
+
+[Service]
+Type=simple
+User=brockar
+ExecStart=/bin/rclone mount gcloud: /home/brockar/Documents/rclone/gcloud/ --vfs-cache-mode full --check-first
+ExecStop=/usr/bin/fusermount -uz /home/brockar/Documents/rclone/gcloud/
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
+
