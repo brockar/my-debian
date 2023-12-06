@@ -100,7 +100,7 @@ fi
 
 #############################################################################################################
 ## CLEAN
-echo "Remove some default apps and games?\n\n1. YES \n2. NO\n"
+echo -e "Remove some default apps and games?\n\n1. YES \n2. NO\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]
 then
