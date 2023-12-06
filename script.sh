@@ -10,6 +10,7 @@ dir=$(pwd)
 
 # Update and Upgrade
 sudo apt update && sudo apt upgrade -y
+# TO DO - No anda
 ## Put your user as sudo
 sudo usermod -aG sudo $usr
 
