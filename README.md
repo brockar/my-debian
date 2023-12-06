@@ -6,3 +6,7 @@ Scripts que uso aparte de lo mio:
 
 - https://github.com/ChrisTitusTech/Debian-titus
 - https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+
+---
+
+DON'T DELETE THIS FOLDER.

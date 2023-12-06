@@ -146,6 +146,17 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 #sudo systemctl start rcloneobs.service
 
 #############################################################################################################
+## Git
+# https://kbroman.org/github_tutorial/
+# git config --global user.name "Your name here"
+# git config --global user.email "your_email@example.com"
+# git config --global color.ui true
+# ssh-keygen -t rsa -C "your_email@example.com"
+# Put the ssh.pub in github
+# ssh -T git@github.com
+
+
+#############################################################################################################
 ## ERROR en el script de Chris Titus 
 # '/root/.bashrc' -> '/home/debian/Documents/myscript/debian-titus/mybash/.bashrc'
 # ln: failed to create symbolic link '/root/.config/starship.toml': No such file or directory
