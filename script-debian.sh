@@ -83,7 +83,7 @@ flatpak install org.mozilla.firefox -y
 
 #############################################################################################################
 ## QEMU and KVM 
-echo "Install QEMU? \n\n1. YES \n2. NO"
+echo -e "Install QEMU? \n\n1. YES \n2. NO"
 read respuesta
 
 if [ "$respuesta" -eq 1 ]; then
