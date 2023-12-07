@@ -178,6 +178,8 @@ sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
 
 # rm -rf ~/.config/nvim/.git
 
+## Font
+
 
 #############################################################################################################
 ## Download CTT Script
