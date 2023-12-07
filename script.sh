@@ -48,8 +48,8 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 ## Install Apps
 sudo nala install htop wget gpg rclone prusa-slicer thunderbird zoxide trash-cli -y
 
-flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord org.vim.Vim io.neovim.nvim -y
-
+flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord  -y
+#org.vim.Vim io.neovim.nvim
 
 # Thorium
 wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
@@ -158,6 +158,26 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 # ln: failed to create symbolic link '/root/.config/starship.toml': No such file or directory
 
 ## MIRAR LO DE LIGHTDM q onda o sacar eso
+
+#############################################################################################################
+## NVIM
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
+
+# ## LazyVIM
+# # required
+# mv ~/.config/nvim{,.bak}
+
+# # optional but recommended
+# mv ~/.local/share/nvim{,.bak}
+# mv ~/.local/state/nvim{,.bak}
+# mv ~/.cache/nvim{,.bak}
+
+# git clone https://github.com/LazyVim/starter ~/.config/nvim
+
+# rm -rf ~/.config/nvim/.git
+
 
 #############################################################################################################
 ## Download CTT Script
