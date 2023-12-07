@@ -18,17 +18,7 @@ sudo usermod -aG sudo $usr
 sudo apt install nala -y
 sudo nala install git  -y
 
-#############################################################################################################
-## Download CTT Script
-#git clone https://github.com/ChrisTitusTech/debian-titus
-cd debian-titus
-sudo ./install.sh
 
-cd $dir
-cd debian-titus/mybash/
-sudo ./setup.sh
-
-cd $dir
 #############################################################################################################
 ## Grub Theme
 echo "Installing Grub Theme"
@@ -58,7 +48,7 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 ## Install Apps
 sudo nala install htop wget gpg rclone prusa-slicer thunderbird zoxide trash-cli -y
 
-flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord -y
+flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord org.vim.Vim io.neovim.nvim -y
 
 
 # Thorium
@@ -169,7 +159,17 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 
 ## MIRAR LO DE LIGHTDM q onda o sacar eso
 
+#############################################################################################################
+## Download CTT Script
+#git clone https://github.com/ChrisTitusTech/debian-titus
+cd debian-titus
+sudo ./install.sh
 
+cd $dir
+cd debian-titus/mybash/
+sudo ./setup.sh
+
+cd $dir
 
 #############################################################################################################
 echo "Finished script"
