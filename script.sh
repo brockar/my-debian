@@ -146,6 +146,11 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 #sudo systemctl enable rcloneobs.service
 #sudo systemctl start rcloneobs.service
 
+###
+# VM Ware Shared
+#mkdir /home/$usr/shares
+#vmhgfs-fuse .host:/ /home/$usr/shares -o subtype=vmhgfs-fuse
+
 #############################################################################################################
 ## Git
 # https://kbroman.org/github_tutorial/
