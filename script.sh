@@ -181,6 +181,13 @@ sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
 ## Clipboard for lazyVim
 # sudo nala install xclip -y
 
+## Lazy git
+#cd $dir
+#LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+#curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+#tar xf lazygit.tar.gz lazygit
+#sudo install lazygit /usr/local/bin
+
 #############################################################################################################
 ## Download CTT Script
 #git clone https://github.com/ChrisTitusTech/debian-titus
@@ -197,4 +204,3 @@ cd $dir
 echo "Finished script"
 echo "======================"
 echo "Reboot your system"
-
