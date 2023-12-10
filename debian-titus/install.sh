@@ -30,7 +30,7 @@ chown -R $username:$username /home/$username
 # Installing Essential Programs 
 nala install feh kitty rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
 # Installing Other less important Programs
-nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji lightdm -y
+nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji -y
 
 # Download Nordic Theme
 cd /usr/share/themes/
@@ -51,7 +51,7 @@ chown $username:$username /home/$username/.fonts/*
 # Reloading Font
 fc-cache -vf
 # Removing zip Files
-rm ./FiraCode.zip ./Meslo.zip
+rm ./FiraCode.zip ./Meslo.zip ./Iosevka.zip
 
 # Install Nordzy cursor
 git clone https://github.com/alvatip/Nordzy-cursors
@@ -70,9 +70,8 @@ rm -rf Nordzy-cursors
 #############################################################################################################
 
 # Enable graphical login and change target from CLI to GUI
-systemctl enable lightdm
-systemctl set-default graphical.target
-
+#systemctl enable lightdm
+#systemctl set-default graphical.target
 
 # Beautiful bash
 # git clone https://github.com/ChrisTitusTech/mybash

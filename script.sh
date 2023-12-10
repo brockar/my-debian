@@ -46,9 +46,9 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 
 #############################################################################################################
 ## Install Apps
-sudo nala install htop wget gpg rclone prusa-slicer thunderbird zoxide trash-cli -y
+sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli -y
 
-flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord -y
+flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer -y
 #org.vim.Vim io.neovim.nvim
 
 # Thorium
@@ -157,7 +157,6 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 # '/root/.bashrc' -> '/home/debian/Documents/myscript/debian-titus/mybash/.bashrc'
 # ln: failed to create symbolic link '/root/.config/starship.toml': No such file or directory
 
-## MIRAR LO DE LIGHTDM q onda o sacar eso
 
 #############################################################################################################
 ## NVIM
