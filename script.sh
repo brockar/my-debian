@@ -58,7 +58,7 @@ sudo apt update
 sudo apt install thorium-browser
 
 # VS Code
-sudo apt-get install wget gpg
+sudo apt-get install wget gpg curl
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -79,7 +79,7 @@ read respuesta
 
 if [ "$respuesta" -eq 1 ]; then
 	echo "Installing QEMU..."
-	sudo apt install qemu-kvm virt-manager virtinst libvirt-clients bridge-utils libvirt-daemon-system -y
+	sudo apt install qemu-kvm virt-manager virtinst spice-vdagent libvirt-clients bridge-utils libvirt-daemon-system -y
 	sudo systemctl enable --now libvirtd
 	sudo systemctl start libvirtd
 
@@ -122,8 +122,8 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 
 ##
 ## RCLONE
-#sudo cp $dir/rcloneod.service /etc/systemd/system/rcloneod.service
-#sudo cp $dir/rcloneobs.service /etc/systemd/system/rcloneobs.service
+#sudo cp $dir/service/rcloneod.service /etc/systemd/system/rcloneod.service
+#sudo cp $dir/service/rcloneobs.service /etc/systemd/system/rcloneobs.service
 
 #sudo systemctl daemon-reload
 #sudo systemctl enable rcloneod.service
@@ -144,9 +144,13 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 # git config --global user.name "Your name here"
 # git config --global user.email "your_email@example.com"
 # git config --global color.ui true
-# ssh-keygen -t rsa -C "your_email@example.com"
+# ssh-keygen -t rsa -C "your_email"
+# or
+# ssh-keygen -t ed25519 -C "email"
 # Put the ssh.pub in github
 # ssh -T git@github.com
+# To copy
+# xclip < brockargh.pub
 
 #############################################################################################################
 ## ERROR en el script de Chris Titus
@@ -163,30 +167,31 @@ sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
 
 # ## LazyVIM
 # # required
-# mv ~/.config/nvim{,.bak}
+mv ~/.config/nvim{,.bak}
 
 # # optional but recommended
-# mv ~/.local/share/nvim{,.bak}
-# mv ~/.local/state/nvim{,.bak}
-# mv ~/.cache/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
 
-# git clone https://github.com/LazyVim/starter ~/.config/nvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 
-# rm -rf ~/.config/nvim/.git
+#FALTA COSAS
 
 ## Font
 # I put it on /debian-titus/install.sh
 # Iosevka nerd font
 
 ## Clipboard for lazyVim
-# sudo nala install xclip -y
+sudo nala install xclip -y
 
 ## Lazy git
-#cd $dir
-#LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-#curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-#tar xf lazygit.tar.gz lazygit
-#sudo install lazygit /usr/local/bin
+cd $dir
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
 
 #############################################################################################################
 ## Download CTT Script
