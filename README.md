@@ -9,7 +9,13 @@ Scripts que uso aparte de lo mio:
 
 ---
 
+# How to use
+
 Run as su (in debian) or sudo
+
+```
+sudo apt install git
+```
 
 ```
 git clone https://github.com/brockar/my-debian.git
@@ -17,6 +23,4 @@ cd my-debian/
 sudo ./script.sh
 ```
 
----
-
-DON'T DELETE THIS FOLDER.
+## DON'T DELETE THIS FOLDER.
