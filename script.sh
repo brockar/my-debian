@@ -46,7 +46,7 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 
 #############################################################################################################
 ## Install Apps
-sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli -y
+sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload timeshift -y
 
 flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer -y
 #org.vim.Vim io.neovim.nvim
@@ -79,7 +79,7 @@ read respuesta
 
 if [ "$respuesta" -eq 1 ]; then
 	echo "Installing QEMU..."
-	sudo apt install qemu-kvm virt-manager virtinst spice-vdagent libvirt-clients bridge-utils libvirt-daemon-system -y
+	sudo nala install qemu-kvm virt-manager virtinst spice-vdagent libvirt-clients bridge-utils libvirt-daemon-system -y
 	sudo systemctl enable --now libvirtd
 	sudo systemctl start libvirtd
 
@@ -208,3 +208,7 @@ cd $dir
 echo "Finished script"
 echo "======================"
 echo "Reboot your system"
+
+#############################################################################################################
+## TO DO
+# Si es laptop no instalar preload timeshift ni QEMU e instalar tlp.
