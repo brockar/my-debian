@@ -157,7 +157,6 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 # '/root/.bashrc' -> '/home/debian/Documents/myscript/debian-titus/mybash/.bashrc'
 # ln: failed to create symbolic link '/root/.config/starship.toml': No such file or directory
 
-
 #############################################################################################################
 ## NVIM
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -212,3 +211,5 @@ echo "Reboot your system"
 #############################################################################################################
 ## TO DO
 # Si es laptop no instalar preload timeshift ni QEMU e instalar tlp.
+#  echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+
