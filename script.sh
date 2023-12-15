@@ -51,11 +51,6 @@ sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload time
 flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer -y
 #org.vim.Vim io.neovim.nvim
 
-# Thorium
-wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
-sudo mv thorium.list /etc/apt/sources.list.d/
-sudo apt update
-sudo apt install thorium-browser
 
 # VS Code
 sudo apt-get install wget gpg curl
