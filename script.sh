@@ -81,6 +81,64 @@ if [ "$respuesta" -eq 1 ]; then
 	sudo usermod -aG libvirt $usr
 fi
 
+# https://www.youtube.com/watch?v=vYQ9Bkv7VG4
+# Create volumes with phisical disk
+# sudo fdisk -l
+# To view volumes and create a partition
+# sudo pvcreate /dev/sdXX
+# XX is the volume to do a phisical volume(?
+#############################################################################################################
+## DOCKER and Docker Desktop 
+# Docker Engine
+sudo for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update 
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Docker compose 
+curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose 
+sudo useradd $USER -G sudo
+sudo usermod -a -G docker $USER
+
+# Docker Desktop
+sudo usermod -aG kvm $USER
+sudo apt remove docker-desktop
+rm -r $HOME/.docker/desktop
+sudo rm /usr/local/bin/com.docker.cli
+sudo apt purge docker-desktop
+sudo apt install gnome-terminal
+wget -qO- https://desktop.docker.com/linux/main/amd64/docker-desktop-4.26.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64&_gl=1*1dgg7ch*_ga*MjY5MTE2MjYxLjE3MDI3NDcwNzk.*_ga_XJWPQMJYHQ*MTcwMjc0NzA3OS4xLjEuMTcwMjc1MjI1Mi4zMC4wLjA.
+sudo apt-get install ./docker-desktop-*.deb
+# Look this line / how to improve
+# 
+#
+#
+
+# To move docker volumes to another disks
+# service docker stop
+# sudo nvim /lib/systemd/system/docker.service 
+# in Exec add 
+# --data-root=/path/to/move  
+# rsync -aP /var/lib/docker/ /new/PATH
+# mv /var/lib/docker /var/lib/docker.old
+# ln -s /new/path /var/lib/docker
+# service docker start
+# docker run --rm hello-world
+# rm -rf /var/lib/docker.old
+
+# https://stackoverflow.com/questions/59345566/move-docker-volume-to-different-partition
+
 #############################################################################################################
 ## CLEAN
 echo -e "Remove some default apps and games?\n\n1. YES \n2. NO\n"
@@ -149,11 +207,6 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 # xclip < brockargh.pub
 
 #############################################################################################################
-## ERROR en el script de Chris Titus
-# '/root/.bashrc' -> '/home/debian/Documents/myscript/debian-titus/mybash/.bashrc'
-# ln: failed to create symbolic link '/root/.config/starship.toml': No such file or directory
-
-#############################################################################################################
 ## NVIM
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
@@ -191,11 +244,11 @@ sudo install lazygit /usr/local/bin
 ## Download CTT Script
 #git clone https://github.com/ChrisTitusTech/debian-titus
 cd debian-titus
-sudo ./install.sh
+sudob bash ./install.sh
 
 cd $dir
 cd debian-titus/mybash/
-sudo ./setup.sh
+sudo bash ./setup.sh
 
 cd $dir
 
