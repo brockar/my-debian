@@ -51,7 +51,6 @@ sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload time
 flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer -y
 #org.vim.Vim io.neovim.nvim
 
-
 # VS Code
 sudo apt-get install wget gpg curl
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
@@ -117,16 +116,18 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 
 ##
 ## RCLONE
-#sudo cp $dir/service/rcloneod.service /etc/systemd/system/rcloneod.service
-#sudo cp $dir/service/rcloneobs.service /etc/systemd/system/rcloneobs.service
+# gcloud as copy / sync (it takes some time the first backup)
+# onedrive as mount (dont copy all files on machine)
+#sudo cp $dir/service/rclonegcloud.service /etc/systemd/system/rclonegcloud.service
+#sudo cp $dir/service/rcloneonedrive.service /etc/systemd/system/rcloneonedrive.service
 
 #sudo systemctl daemon-reload
-#sudo systemctl enable rcloneod.service
-#sudo systemctl start rcloneod.service
+#sudo systemctl enable rclonegcloud.service
+#sudo systemctl start rclonegcloud.service
 
 #sudo systemctl daemon-reload
-#sudo systemctl enable rcloneobs.service
-#sudo systemctl start rcloneobs.service
+#sudo systemctl enable rcloneonedrive.service
+#sudo systemctl start rcloneonedrive.service
 
 ###
 # VM Ware Shared
@@ -207,4 +208,3 @@ echo "Reboot your system"
 ## TO DO
 # Si es laptop no instalar preload timeshift ni QEMU e instalar tlp.
 #  echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
-

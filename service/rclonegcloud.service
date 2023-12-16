@@ -1,0 +1,14 @@
+[Unit]
+Description=rclonemount
+After=multi-user.target
+
+[Service]
+Type=simple
+User=brockar
+ExecStart=/bin/rclone sync -P gcloud: /home/brockar/Documents/rclone/gcloud/ --transfers=40 
+ExecStop=/usr/bin/rclone copy -P /home/brockar/Documents/rclone/gcloud/ : gcloud
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
+

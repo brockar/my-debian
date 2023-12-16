@@ -5,7 +5,7 @@ After=multi-user.target
 [Service]
 Type=simple
 User=brockar
-ExecStart=/bin/rclone mount onedrive: /home/brockar/Documents/rclone/onedrive/ --vfs-cache-mode full --check-first
+ExecStart=/bin/rclone mount onedrive: /home/brockar/Documents/rclone/onedrive/ --vfs-cache-mode full --check-first --allow-non-empty --buffer-size 1024M
 ExecStop=/usr/bin/fusermount -uz /home/brockar/Documents/rclone/onedrive/
 Restart=on-abort
 
