@@ -245,7 +245,7 @@ sudo install lazygit /usr/local/bin
 ## Download CTT Script
 #git clone https://github.com/ChrisTitusTech/debian-titus
 cd debian-titus
-sudob bash ./install.sh
+sudo bash ./install.sh
 
 cd $dir
 cd debian-titus/mybash/
