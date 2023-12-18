@@ -90,36 +90,37 @@ fi
 #############################################################################################################
 ## DOCKER and Docker Desktop 
 # Docker Engine
-sudo for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+# sudo for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 # Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+# sudo apt-get update
+# sudo apt-get install ca-certificates curl gnupg
+# sudo install -m 0755 -d /etc/apt/keyrings
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+# sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 # Add the repository to Apt sources:
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# echo \
+#   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+#   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+#   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# sudo apt-get update 
+# sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Docker compose 
-curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose 
-sudo useradd $USER -G sudo
-sudo usermod -a -G docker $USER
+# curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose 
+# sudo useradd $USER -G sudo
+# sudo usermod -a -G docker $USER
 
 # Docker Desktop
-sudo usermod -aG kvm $USER
-sudo apt remove docker-desktop
-rm -r $HOME/.docker/desktop
-sudo rm /usr/local/bin/com.docker.cli
-sudo apt purge docker-desktop
-sudo apt install gnome-terminal
-wget -qO- https://desktop.docker.com/linux/main/amd64/docker-desktop-4.26.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64&_gl=1*1dgg7ch*_ga*MjY5MTE2MjYxLjE3MDI3NDcwNzk.*_ga_XJWPQMJYHQ*MTcwMjc0NzA3OS4xLjEuMTcwMjc1MjI1Mi4zMC4wLjA.
-sudo apt-get install ./docker-desktop-*.deb
+# sudo usermod -aG kvm $USER
+# sudo apt remove docker-desktop
+# rm -r $HOME/.docker/desktop
+# sudo rm /usr/local/bin/com.docker.cli
+# sudo apt purge docker-desktop
+# sudo apt install gnome-terminal
+# wget -qO- https://desktop.docker.com/linux/main/amd64/docker-desktop-4.26.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64&_gl=1*1dgg7ch*_ga*MjY5MTE2MjYxLjE3MDI3NDcwNzk.*_ga_XJWPQMJYHQ*MTcwMjc0NzA3OS4xLjEuMTcwMjc1MjI1Mi4zMC4wLjA.
+# sudo apt-get install ./docker-desktop-*.deb
+
 # Look this line / how to improve
 # 
 #
