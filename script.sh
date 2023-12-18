@@ -88,7 +88,7 @@ fi
 # sudo pvcreate /dev/sdXX
 # XX is the volume to do a phisical volume(?
 #############################################################################################################
-## DOCKER and Docker Desktop 
+## DOCKER and Docker Desktop
 # Docker Engine
 # sudo for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 # Add Docker's official GPG key:
@@ -103,11 +103,11 @@ fi
 #   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 #   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
 #   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-# sudo apt-get update 
+# sudo apt-get update
 # sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Docker compose 
-# curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose 
+# Docker compose
+# curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 # sudo useradd $USER -G sudo
 # sudo usermod -a -G docker $USER
 
@@ -122,15 +122,15 @@ fi
 # sudo apt-get install ./docker-desktop-*.deb
 
 # Look this line / how to improve
-# 
+#
 #
 #
 
 # To move docker volumes to another disks
 # service docker stop
-# sudo nvim /lib/systemd/system/docker.service 
-# in Exec add 
-# --data-root=/path/to/move  
+# sudo nvim /lib/systemd/system/docker.service
+# in Exec add
+# --data-root=/path/to/move
 # rsync -aP /var/lib/docker/ /new/PATH
 # mv /var/lib/docker /var/lib/docker.old
 # ln -s /new/path /var/lib/docker
@@ -261,4 +261,5 @@ echo "Reboot your system"
 #############################################################################################################
 ## TO DO
 # Si es laptop no instalar preload timeshift ni QEMU e instalar tlp.
-#  echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+# echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+# Poner scripts opcionales (nvidia, tlp (notebook), etc)
