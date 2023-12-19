@@ -2,8 +2,8 @@
 
 # Check if Script is Run as Root
 if [[ $EUID -ne 0 ]]; then
-  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
-  exit 1
+	echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
+	exit 1
 fi
 
 username=$(id -u -n 1000)
@@ -27,8 +27,8 @@ cp bg.jpg /home/$username/Pictures/backgrounds/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
-# Installing Essential Programs 
-nala install feh kitty rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
+# Installing Essential Programs
+nala install feh kitty thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
 # Installing Other less important Programs
 nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji -y
 
@@ -37,7 +37,7 @@ cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
 
 # Installing fonts
-cd $builddir 
+cd $builddir
 nala install fonts-font-awesome -y
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
@@ -59,7 +59,7 @@ cd Nordzy-cursors
 ./install.sh
 cd $builddir
 rm -rf Nordzy-cursors
- 
+
 #############################################################################################################
 # Install brave-browser
 # nala install apt-transport-https curl -y
@@ -81,5 +81,3 @@ cd $builddir
 
 # Use nala
 bash scripts/usenala
-
-

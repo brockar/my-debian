@@ -90,7 +90,7 @@ fi
 #############################################################################################################
 ## DOCKER and Docker Desktop
 # Docker Engine
-# sudo for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+# for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 # Add Docker's official GPG key:
 # sudo apt-get update
 # sudo apt-get install ca-certificates curl gnupg
@@ -188,6 +188,8 @@ sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 #sudo systemctl enable rcloneonedrive.service
 #sudo systemctl start rcloneonedrive.service
 
+#mkdir ~/Documents/rclone/gcloud/
+#mkdir ~/Documents/rclone/onedrive/
 ###
 # VM Ware Shared
 #mkdir /home/$usr/shares
