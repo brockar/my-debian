@@ -159,7 +159,7 @@ fi
 # sudo nala fetch
 sudo cp /etc/apt/sources.list.d/nala-sources.list /etc/apt/sources.list.d/nala-sources.list.bak
 rm /etc/apt/sources.list.d/nala-sources.list
-sudo cp $dir/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
+sudo cp $dir/extras/nala-sources.list /etc/apt/sources.list.d/nala-sources.list
 
 #############################################################################################################
 ## To do later
