@@ -1,0 +1,1 @@
+sudo cat ./service/rclonegcloud.service

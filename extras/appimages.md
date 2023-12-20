@@ -1,11 +1,7 @@
 https://tuxrootsite.wordpress.com/2022/07/21/create-desktop-shortcut-for-an-appimage-on-linux/
-
 Download icon image.png/svg
-
 chmod u+x your_app.AppImage
-
 sudo mkdir /opt/your_app
- 
 sudo mv ~/Downloads/your_app.AppImage /opt/your_app/your_app.AppImage
 sudo mv ~/Downloads/your_app.png /opt/your_app/your_app.png
 
