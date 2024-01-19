@@ -60,6 +60,13 @@ sudo apt install code
 sudo nala purge firefox-esr* -y
 flatpak install org.mozilla.firefox -y
 
+## Brave
+nala install apt-transport-https curl -y
+curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
+nala update
+nala install brave-browser -y
+
 ## QEMU and KVM
 echo -e "\n\n\nInstall QEMU? \n\n1. YES \n2. NO"
 read respuesta
@@ -157,4 +164,3 @@ echo "Reboot your system"
 # Sign in on rclone Google Drive and One Drive
 # Tweaks:
 # 	-Cursor -Icons -Themes -Fonts
-
