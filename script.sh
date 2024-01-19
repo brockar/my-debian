@@ -146,9 +146,15 @@ echo "Reboot your system"
 # Si es laptop no instalar preload timeshift ni QEMU e instalar tlp.
 # echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
 # Poner scripts opcionales (nvidia, tlp (notebook), etc)
+#
+# Animated Wallpaper
+# wget https://github.com/cheesecakeufo/komorebi/releases/download/v2.1/komorebi-2.1-64-bit.deb
+# sudo apt install komorebi*.deb
+
 ##################################################
 # Sing in on vs code
 # Sign in on obsidian
 # Sign in on rclone Google Drive and One Drive
 # Tweaks:
 # 	-Cursor -Icons -Themes -Fonts
+
