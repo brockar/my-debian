@@ -25,3 +25,4 @@ TopHat
 [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded)
 [Gnome 4x UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 [Blur my Sell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+[Freon](https://extensions.gnome.org/extension/841/freon/) (Temperatures)
