@@ -28,7 +28,7 @@ mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
 # Installing Essential Programs
-nala install feh kitty thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
+nala install feh kitty thunar nitrogen lxpolkit x11-xserver-utils unzip wget build-essential libx11-dev libxft-dev libxinerama-dev -y # pulseaudio pavucontrol
 # Installing Other less important Programs
 nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji -y
 
