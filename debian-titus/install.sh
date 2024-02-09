@@ -6,8 +6,8 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-username=$(id -u -n 1000)
 builddir=$(pwd)
+username=$(id -u -n 1000)
 
 # Update packages list and update system
 apt update
@@ -17,6 +17,7 @@ apt upgrade -y
 apt install nala -y
 
 # Making .config and Moving config files and background to Pictures
+#
 cd $builddir
 mkdir -p /home/$username/.config
 mkdir -p /home/$username/.fonts
@@ -28,7 +29,7 @@ mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
 # Installing Essential Programs
-nala install feh kitty thunar nitrogen lxpolkit x11-xserver-utils unzip wget build-essential libx11-dev libxft-dev libxinerama-dev -y # pulseaudio pavucontrol
+nala install feh kitty thunar lxpolkit x11-xserver-utils unzip wget build-essential libx11-dev libxft-dev libxinerama-dev -y # pulseaudio pavucontrol
 # Installing Other less important Programs
 nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji -y
 
@@ -43,8 +44,6 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Iosevka.zip
-unzip Iosevka.zip -d /home/$username/.fonts
 mv dotfonts/fontawesome/otfs/*.otf /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
 

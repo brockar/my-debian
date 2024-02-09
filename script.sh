@@ -68,7 +68,7 @@ nala update
 nala install brave-browser -y
 
 ## QEMU and KVM
-echo -e "\n\n\nInstall QEMU? \n\n1. YES \n2. NO"
+echo -e "\n\n\nInstall QEMU? \n\n1. YES \n2. NO [Default]"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
 	echo "\nInstalling QEMU..."
@@ -98,15 +98,14 @@ fi
 
 #############################################################################################################
 ### CLEAN
-echo -e "\n\n\nRemove some default apps and games?\n\n1. YES \n2. NO\n"
+echo -e "\n\n\nRemove some default apps and games?\n\n1. YES \n2. NO [Default]\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
 	echo "Removing apps..."
 	#games
 	sudo nala remove gnome-mines gnome-robots gnome-sudoku gnome-taquin gnome-tetravex gnome-2048 gnome-klotski gnome-mahjongg gnome-nibbles gnome-chess swell-foop tali five-or-more four-in-a-row aisleriot hitori lightsoff quadrapassel -y
 	#gnome software
-	sudo nala remove gnome-sound-recorder gnome-text-editor gnome-maps shotwell sane-airscan cheese evolution rhythmbox -y
-
+	sudo nala remove gnome-sound-recorder gnome-text-editor gnome-maps shotwell sane-airscan cheese evolution rhythmbox transmission-common transmission-gtk -y
 else
 	echo "no app is being removed. xd"
 fi
@@ -138,7 +137,7 @@ sudo install lazygit /usr/local/bin
 
 #############################################################################################################
 ## Docker
-echo -e "\n\n\nInstall Docker?\n\n1. YES \n2. NO\n"
+echo -e "\n\n\nInstall Docker?\n\n1. YES \n2. NO [Default]\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
 	sudo bash ./extras/docker.sh

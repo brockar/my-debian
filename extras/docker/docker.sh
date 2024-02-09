@@ -21,25 +21,23 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 #sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # sudo apt install docker.io -y
-# for Debian Testing 
+# for Debian Testing
 
 ## Docker compose
 sudo curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-sudo useradd $USER -G sudo
-sudo usermod -a -G docker $USER
-
+sudo useradd $usr -G sudo
+sudo usermod -a -G docker $usr
 
 ## Docker Desktop
 echo -e "Install Docker Desktop?\n\n1. YES \n2. NO\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
-    sudo bash ./docker-d.sh
+	sudo bash ./docker-d.sh
 fi
-
 
 ##  To move docker volumes to another disks
 # sudo service docker stop
-# sudo systemctl stop docker.socket 
+# sudo systemctl stop docker.socket
 # sudo nvim /lib/systemd/system/docker.service
 # in ExecStart add
 # --data-root=/path/to/move

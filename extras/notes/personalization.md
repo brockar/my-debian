@@ -26,3 +26,14 @@ TopHat
 [Gnome 4x UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 [Blur my Sell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
 [Freon](https://extensions.gnome.org/extension/841/freon/) (Temperatures)
+
+# GRUB
+/etc/default/grub
+#GRUB_GFXMODE=auto
+to
+GRUB_GFXMODE="1368x768"
+
+and
+
+sudo update-grub
+
