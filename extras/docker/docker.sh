@@ -24,9 +24,10 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 # for Debian Testing 
 
 ## Docker compose
-curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-sudo useradd $usr -G sudo
-sudo usermod -a -G docker $usr
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo useradd $USER -G sudo
+sudo usermod -a -G docker $USER
+
 
 ## Docker Desktop
 echo -e "Install Docker Desktop?\n\n1. YES \n2. NO\n"
@@ -37,11 +38,12 @@ fi
 
 
 ##  To move docker volumes to another disks
-# service docker stop
+# sudo service docker stop
+# sudo systemctl stop docker.socket 
 # sudo nvim /lib/systemd/system/docker.service
-# in Exec add
+# in ExecStart add
 # --data-root=/path/to/move
-# rsync -aP /var/lib/docker/ /new/PATH
+# sudo rsync -aP /var/lib/docker/ /new/PATH
 # mv /var/lib/docker /var/lib/docker.old
 # ln -s /new/path /var/lib/docker
 # service docker start
