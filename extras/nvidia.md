@@ -62,6 +62,10 @@ WantedBy=multi-user.target
 `sudo reboot now`
 
 ---
+# Thermal
+on crontab
+nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=50
+
 
 sources:
 - https://wiki.debian.org/NvidiaGraphicsDrivers#Debian_Unstable_.22Sid.22
