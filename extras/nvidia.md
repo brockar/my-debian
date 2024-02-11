@@ -63,8 +63,8 @@ WantedBy=multi-user.target
 
 ---
 # Thermal
-on crontab
-nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=50
+on sudo crontab
+@reboot nvidia-settings -V -c :0 -a '[gpu:0]/GPUFanControlState=1' -a '[fan:0]/GPUTargetFanSpeed='"50" -a '[fan:1]/GPUTargetFanSpeed='"50"
 
 
 sources:

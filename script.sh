@@ -44,7 +44,7 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 #############################################################################################################
 ### Install Apps
 sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload timeshift gparted -y
-flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer -y
+flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop -y
 
 ## VS Code
 sudo apt-get install wget gpg curl
