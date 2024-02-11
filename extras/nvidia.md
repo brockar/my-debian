@@ -67,3 +67,4 @@ sources:
 - https://wiki.debian.org/NvidiaGraphicsDrivers#Debian_Unstable_.22Sid.22
 - https://wiki.debian.org/SecureBoot#MOK_-_Machine_Owner_Key
 - https://gist.github.com/padakuro/38c588dcc743092f7f98ba7720685e50
+- https://docs.kinetica.com/7.1/install/nvidia_deb/
