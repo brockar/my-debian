@@ -18,6 +18,11 @@ Show the overview = Disable
 ### Windows
 Activate the windows menu = Disable
 
+### Custom Shortcuts
+flameshot gui = Shift + Super + S 
+gnome-terminal = Super +  Shift + X
+kitty = Super + X
+
 ## Extensions
 Clipboard Indicator
 TopHat
