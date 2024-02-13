@@ -58,7 +58,7 @@ sudo apt install code
 
 ## Firefox
 sudo nala purge firefox-esr* -y
-flatpak install org.mozilla.firefox -y
+sudo bash $dir/extras/firefox-deb.sh
 
 ## Brave
 nala install apt-transport-https curl -y
