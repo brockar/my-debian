@@ -12,6 +12,7 @@ deb http://deb.debian.org/debian/ sid main contrib non-free non-free-firmware
 2. Update the list of available packages, then we can install the nvidia-driver package, plus the necessary firmware: 
 ```
 apt update
+apt install linux-headers-amd64
 apt install nvidia-driver firmware-misc-nonfree
 ```
 
