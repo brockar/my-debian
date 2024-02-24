@@ -43,7 +43,7 @@ fi
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #############################################################################################################
 ### Install Apps
-sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload timeshift gparted -y
+sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload timeshift gparted helvum -y
 flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop -y
 
 ## VS Code
