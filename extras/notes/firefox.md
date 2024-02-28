@@ -6,3 +6,6 @@ media.ffvpx.enabled "false"
 add to launcher
 /usr/share/applications/firefox.desktop
 Exec= firefox %U MOZ_X11_EGL=1
+
+adwaita theme
+curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
