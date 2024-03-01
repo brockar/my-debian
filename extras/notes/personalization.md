@@ -26,7 +26,7 @@ kitty = Super + X
 ## Extensions
 Clipboard Indicator
 TopHat
-[Alt Tab Mod](https://extensions.gnome.org/extension/4007/alttab-mod/)
+#Try without [Alt Tab Mod](https://extensions.gnome.org/extension/4007/alttab-mod/)
 [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded)
 [Gnome 4x UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 [Blur my Sell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
