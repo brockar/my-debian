@@ -9,13 +9,15 @@ dir=$(pwd)
 mkdir /home/$usr/Documents/rclone/gcloud/
 mkdir /home/$usr/Documents/rclone/onedrive/
 
-sudo cp ./service/rclonegcloud.service /etc/systemd/system/rclonegcloud.service
-sudo cp ./service/rcloneonedrive.service /etc/systemd/system/rcloneonedrive.service
+sudo cp ./rcloneonedrive.service /etc/systemd/system/
+sudo cp ./rclonegcloud.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
-sudo systemctl enable rclonegcloud.service
-sudo systemctl start rclonegcloud.service
 
 sudo systemctl enable rcloneonedrive.service
 sudo systemctl start rcloneonedrive.service
+
+sudo systemctl enable rclonegcloud.service
+sudo systemctl start rclonegcloud.service
+
 sudo systemctl daemon-reload
