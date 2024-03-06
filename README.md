@@ -6,21 +6,22 @@ Basically my script to install debian as easy as possible.
 
 https://brockar.github.io/easy-download-debian/
 
-# How to use
+## How to use
 
-Run as su (in debian) or sudo.
-
-```
+Run as sudo.  
+(if u can't, just run `usermod -aG sudo $(USER)` as root)
+```bash
 sudo apt install git
 ```
-
-```
+```bash
 git clone https://github.com/brockar/my-debian.git
 cd my-debian/
 sudo ./script.sh
 ```
 
 ## DON'T DELETE THIS FOLDER.
+
+There are some extras installer on `./extras/`
 
 Scripts I use other than my own:
 

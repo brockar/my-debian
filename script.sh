@@ -43,9 +43,9 @@ fi
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #############################################################################################################
 ### Install Apps
-sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload timeshift gparted helvum gnome-shell-extension-manager btop tree tldr -y
+sudo nala install htop wget gpg rclone thunderbird zoxide trash-cli preload timeshift gparted helvum gnome-shell-extension-manager btop tree tldr audacity -y
 
-flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop com.rtosta.zapzap -y
+flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop com.rtosta.zapzap org.videolan.VLC -y
 
 ## VS Code
 sudo apt-get install wget gpg curl
@@ -106,7 +106,7 @@ if [ "$respuesta" -eq 1 ]; then
 	#games
 	sudo nala remove gnome-mines gnome-robots gnome-sudoku gnome-taquin gnome-tetravex gnome-2048 gnome-klotski gnome-mahjongg gnome-nibbles gnome-chess swell-foop tali five-or-more four-in-a-row aisleriot hitori lightsoff quadrapassel -y
 	#gnome software
-	sudo nala remove gnome-sound-recorder gnome-text-editor gnome-maps shotwell sane-airscan cheese evolution rhythmbox transmission-common transmission-gtk -y
+	sudo nala remove gnome-sound-recorder gnome-text-editor gnome-maps shotwell sane-airscan cheese evolution rhythmbox transmission-common transmission-gtk totem gnome-music -y
 else
 	echo "no app is being removed. xd"
 fi
