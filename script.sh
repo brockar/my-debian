@@ -104,7 +104,9 @@ read respuesta
 if [ "$respuesta" -eq 1 ]; then
 	echo "Removing apps..."
 	#games
-	sudo nala remove gnome-mines gnome-robots gnome-sudoku gnome-taquin gnome-tetravex gnome-2048 gnome-klotski gnome-mahjongg gnome-nibbles gnome-chess swell-foop tali five-or-more four-in-a-row aisleriot hitori lightsoff quadrapassel -y
+	#sudo nala remove gnome-mines gnome-robots gnome-sudoku gnome-taquin gnome-tetravex gnome-2048 gnome-klotski gnome-mahjongg gnome-nibbles gnome-chess swell-foop tali five-or-more four-in-a-row aisleriot hitori lightsoff quadrapassel -y
+	sudo nala remove gnome-games gnome-games-support gnome-games-support-cor
+	sudo nala autoremove
 	#gnome software
 	sudo nala remove gnome-sound-recorder gnome-text-editor gnome-maps shotwell sane-airscan cheese evolution rhythmbox transmission-common transmission-gtk totem gnome-music -y
 else
