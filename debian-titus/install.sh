@@ -16,8 +16,8 @@ mkdir -p /home/$username/.config
 mkdir -p /home/$username/.fonts
 mkdir -p /home/$username/Pictures
 mkdir -p /home/$username/Pictures/backgrounds
-cp -R dotconfig/* /home/$username/.config/
-cp bg.jpg /home/$username/Pictures/backgrounds/
+cp -R $builddir/dotconfig/* /home/$username/.config/
+cp $builddir/bg.jpg /home/$username/Pictures/backgrounds/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
@@ -37,7 +37,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
-mv dotfonts/fontawesome/otfs/*.otf /home/$username/.fonts/
+mv $builddir/dotfonts/fontawesome/otfs/*.otf /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
 
 # Reloading Font
@@ -59,9 +59,9 @@ rm -rf Nordzy-cursors
 
 # Beautiful bash
 # git clone https://github.com/ChrisTitusTech/mybash
-cd $builddir
-cd mybash
-sudo bash setup.sh
-cd $builddir
+#cd $builddir
+#cd mybash
+sudo bash $builddir/mybash/setup.sh
+#cd $builddir
 # Use nala
-sudo bash scripts/usenala
+sudo bash $builddir/scripts/usenala
