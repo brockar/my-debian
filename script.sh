@@ -59,7 +59,7 @@ sudo apt install code
 
 ## Firefox
 sudo nala purge firefox-esr* -y
-sudo bash $dir/extras/firefox-deb.sh
+sudo bash $dir/extras/installers/firefox-deb.sh
 
 ## Brave
 nala install apt-transport-https curl -y
@@ -141,17 +141,13 @@ sudo install lazygit /usr/local/bin
 echo -e "\n\n\nInstall Docker?\n\n1. YES \n2. NO [Default]\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
-	sudo bash ./extras/docker.sh
+	sudo bash $dir/extras/installers/docker/docker.sh
 fi
 #############################################################################################################
 ## Download CTT Script
 #git clone https://github.com/ChrisTitusTech/debian-titus
-cd debian-titus
-sudo bash ./install.sh
-
-cd $dir
-cd debian-titus/mybash/
-sudo bash ./setup.sh
+sudo bash $dir/debian-titus/install.sh
+sudo bash $dir/debian-titus/mybash/setup.sh
 #############################################################################################################
 echo -e "\n\n\nFinished script"
 echo "======================"

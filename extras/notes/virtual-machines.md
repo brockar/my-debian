@@ -6,4 +6,4 @@ vmhgfs-fuse .host:/ /home/$usr/shares -o subtype=vmhgfs-fuse
 
 # qemu 
 if u are on qemu
-sudo nala install open-vm-tools
+sudo nala install open-vm-tools spice-vdagent
