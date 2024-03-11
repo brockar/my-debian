@@ -1,3 +1,4 @@
 - [ ] mirar https://www.chezmoi.io/
 - [ ] probar `sudo apt remove gnome-games gnome-games-support gnome-games-support-cor` `sudo apt autoremove` en lugar de borrar los juegos uno por uno
 - [ ] install audacity
+- [ ] elvum not found

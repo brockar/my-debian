@@ -9,13 +9,6 @@ fi
 builddir=$(pwd)
 username=$(id -u -n 1000)
 
-# Update packages list and update system
-apt update
-apt upgrade -y
-
-# Install nala
-apt install nala -y
-
 # Making .config and Moving config files and background to Pictures
 #
 cd $builddir
@@ -29,9 +22,9 @@ mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
 # Installing Essential Programs
-nala install feh kitty thunar lxpolkit x11-xserver-utils unzip wget build-essential libx11-dev libxft-dev libxinerama-dev -y # pulseaudio pavucontrol
+nala install feh kitty thunar lxpolkit x11-xserver-utils unzip build-essential libx11-dev libxft-dev libxinerama-dev -y #pulseaudio pavucontrol
 # Installing Other less important Programs
-nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji -y
+nala install flameshot psmisc mangohud lxappearance papirus-icon-theme fonts-noto-color-emoji -y
 
 # Download Nordic Theme
 cd /usr/share/themes/
@@ -60,23 +53,15 @@ cd $builddir
 rm -rf Nordzy-cursors
 
 #############################################################################################################
-# Install brave-browser
-nala install apt-transport-https curl -y
-curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
-nala update
-nala install brave-browser -y
-#############################################################################################################
-
 # Enable graphical login and change target from CLI to GUI
 #systemctl enable lightdm
 #systemctl set-default graphical.target
 
 # Beautiful bash
 # git clone https://github.com/ChrisTitusTech/mybash
+cd $builddir
 cd mybash
 sudo bash setup.sh
 cd $builddir
-
 # Use nala
 sudo bash scripts/usenala
