@@ -118,7 +118,8 @@ fi
 ## NVIM
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
-sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
+#sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
+sudo mv $dir/nvim.appimage /usr/local/bin/nvim
 
 # ## LazyVIM
 # # required
@@ -151,6 +152,7 @@ fi
 #git clone https://github.com/ChrisTitusTech/debian-titus
 sudo bash $dir/debian-titus/install.sh
 sudo bash $dir/debian-titus/mybash/setup.sh
+sudo bash $dir/debian-titus/scripts/usenala
 #############################################################################################################
 echo -e "\n\n\nFinished script"
 echo "======================"

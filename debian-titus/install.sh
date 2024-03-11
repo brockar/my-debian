@@ -61,7 +61,7 @@ rm -rf Nordzy-cursors
 # git clone https://github.com/ChrisTitusTech/mybash
 #cd $builddir
 #cd mybash
-sudo bash $builddir/mybash/setup.sh
+#sudo bash $builddir/mybash/setup.sh
 #cd $builddir
 # Use nala
-sudo bash $builddir/scripts/usenala
+#sudo bash $builddir/scripts/usenala
