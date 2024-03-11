@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-builddir=$(pwd)
+builddir=$(pwd)/debian-titus
 username=$(id -u -n 1000)
 
 # Making .config and Moving config files and background to Pictures
