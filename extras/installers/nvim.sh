@@ -8,7 +8,7 @@ fi
 ## NVIM
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
-sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
+sudo ln -s nvim.appimage /usr/local/bin/nvim
 #sudo mv $dir/nvim.appimage /usr/local/bin/nvim
 
 # ## LazyVIM
