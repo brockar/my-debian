@@ -18,7 +18,6 @@ mkdir -p /home/$username/Pictures
 mkdir -p /home/$username/Pictures/backgrounds
 cp -R $builddir/dotconfig/* /home/$username/.config/
 cp $builddir/bg.jpg /home/$username/Pictures/backgrounds/
-mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
 # Installing Essential Programs
