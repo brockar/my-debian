@@ -42,7 +42,8 @@ chown $username:$username /home/$username/.fonts/*
 
 # Reloading Font
 fc-cache -vf
-# Removing zip Files
+# Removing zip files
+cd $builddir
 rm ./FiraCode.zip ./Meslo.zip ./Iosevka.zip
 
 # Install Nordzy cursor
@@ -58,6 +59,7 @@ rm -rf Nordzy-cursors
 #systemctl set-default graphical.target
 
 # Beautiful bash
+# (On main script)
 # git clone https://github.com/ChrisTitusTech/mybash
 #cd $builddir
 #cd mybash

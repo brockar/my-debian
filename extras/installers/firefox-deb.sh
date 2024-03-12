@@ -21,4 +21,4 @@ Pin: origin packages.mozilla.org
 Pin-Priority: 1000
 ' | sudo tee /etc/apt/preferences.d/mozilla
 
-sudo nala update && sudo nala install firefox
+sudo nala update && sudo nala install firefox -y
