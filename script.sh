@@ -22,7 +22,7 @@ sudo nala fetch
 #############################################################################################################
 ## Install System apps
 # Flatpak
-sudo nala instAll flatpak -y
+sudo nala install flatpak -y
 # If the shell is gnome
 if [ $XDG_CURRENT_DESKTOP == "GNOME" ]; then
 	sudo nala install gnome-software-plugin-flatpak -y
