@@ -8,7 +8,7 @@ fi
 #vars
 usr=$(id -u -n 1000)
 dir=$(pwd)
-home=/home/$usr/
+home=/home/$usr
 
 # Update and Upgrade
 sudo apt update && sudo apt upgrade -y
@@ -22,7 +22,7 @@ sudo nala fetch
 #############################################################################################################
 ## Install System apps
 # Flatpak
-sudo nala install flatpak -y
+# sudo nala install flatpak -y (not necesary)
 # If the shell is gnome
 if [ $XDG_CURRENT_DESKTOP == "GNOME" ]; then
 	sudo nala install gnome-software-plugin-flatpak -y
