@@ -131,11 +131,11 @@ if [ "$respuesta" -eq 1 ]; then
 	sudo bash $dir/extras/installers/docker/docker.sh
 fi
 #############################################################################################################
-## Download CTT Script
+## CTT Script
 #git clone https://github.com/ChrisTitusTech/debian-titus
-sudo bash $dir/debian-titus/install.sh
-sudo bash $dir/debian-titus/mybash/setup.sh
-sudo bash $dir/debian-titus/scripts/usenala
+$dir/debian-titus/install.sh
+$dir/debian-titus/mybash/setup.sh
+$dir/debian-titus/scripts/usenala
 #############################################################################################################
 ## Grub Theme
 echo "Install Grub Theme"

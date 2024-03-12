@@ -3,3 +3,4 @@
 - [ ] helvum not found
 - [ ] no funciona el kitty coso, probar 
 - [ ] no funciona nvim copy ~
+- [ ] userdirs
