@@ -18,7 +18,7 @@ sudo usermod -aG sudo $usr
 sudo apt install nala git -y
 
 ## nala fetch source lists
-sudo nala fetch
+#sudo nala fetch
 #############################################################################################################
 ## Install System apps
 # Flatpak
@@ -35,7 +35,7 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 
 #############################################################################################################
 ### CLEAN
-echo -e "\n\n\nRemove some default apps and games?\n\n1. YES [Default]\\n2. NO n"
+echo -e "\n\n\nRemove some default apps and games?\n\n1. YES [Default]\\n2. NO \n"
 read respuesta
 if [ "$respuesta" -eq 2 ]; then
 	echo "no app is being removed. xd"
