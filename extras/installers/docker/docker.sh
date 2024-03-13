@@ -32,7 +32,7 @@ sudo usermod -a -G docker $usr
 echo -e "Install Docker Desktop?\n\n1. YES \n2. NO\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
-	sudo bash ./docker-d.sh
+	sudo bash $dir/extras/installers/docker/docker-d.sh
 fi
 
 ##  To move docker volumes to another disks
