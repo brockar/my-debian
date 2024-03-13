@@ -53,7 +53,11 @@ fi
 ### Install Apps
 sudo nala update && sudo nala upgrade -y
 #doesn't work well
-sudo apt install wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr audacity helvum -y
+#sudo apt install wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr audacity helvum -y
+for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr audacity helvum; do
+	sudo nala install $pkg -y
+done
+
 flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop com.rtosta.zapzap org.videolan.VLC -y
 
 ## Vs Code
