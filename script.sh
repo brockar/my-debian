@@ -86,7 +86,7 @@ $dir/extras/installers/nvim.sh
 echo -e "\n\n\nInstall Docker?\n\n1. YES \n2. NO [Default]\n"
 read respuesta
 if [ "$respuesta" -eq 1 ]; then
-	$dir/extras/installers/docker/docker.sh
+	$dir/extras/installers/docker.sh
 fi
 #############################################################################################################
 ## CTT Script
