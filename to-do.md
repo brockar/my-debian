@@ -1,2 +1,2 @@
 - [ ] mirar https://www.chezmoi.io/
-- [ ] gnome auto personalization 
+- [ ] gnome auto personalization https://linux.m2osw.com/transform-gnome-settings-command-lines
