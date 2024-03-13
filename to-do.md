@@ -1,1 +1,2 @@
 - [ ] mirar https://www.chezmoi.io/
+- [ ] gnome auto personalization 
