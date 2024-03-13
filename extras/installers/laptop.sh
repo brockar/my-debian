@@ -8,6 +8,5 @@ usr=$(id -u -n 1000)
 dir=$(pwd)
 
 sudo nala tlp -y
-
 sudo nala purge thimeshift -y
 # Install Battery Health Charging extension
