@@ -1,2 +1,3 @@
 - [ ] mirar https://www.chezmoi.io/
 - [ ] gnome auto personalization 
+- [ ] docker-d doesn't work

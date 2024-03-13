@@ -52,6 +52,7 @@ fi
 #############################################################################################################
 ### Install Apps
 sudo nala update && sudo nala upgrade -y
+#doesn't work well
 sudo nala install wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr audacity helvum -y
 flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop com.rtosta.zapzap org.videolan.VLC -y
 
