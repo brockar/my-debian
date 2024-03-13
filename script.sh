@@ -54,7 +54,7 @@ fi
 sudo nala update && sudo nala upgrade -y
 #doesn't work well
 #sudo apt install wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr audacity helvum -y
-for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr audacity helvum; do
+for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr helvum; do
 	sudo nala install $pkg -y
 done
 
