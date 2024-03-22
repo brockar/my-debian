@@ -20,3 +20,5 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet spash"
 
 `sudo update grub`
 
+# Red
+https://jlsmorilloblog.wordpress.com/2017/06/25/montar-carpeta-de-red-en-linux/
