@@ -6,4 +6,4 @@ if [ $(id -u) -ne 0 ]; then
 	exit
 fi
 sudo apt install hstr
-hstr --show-bash-configuration >>~/.bashrc
+hstr --show-configuration >>~/.bashrc
