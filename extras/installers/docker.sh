@@ -29,3 +29,14 @@ sudo usermod -a -G docker $usr
 # rm -rf /var/lib/docker.old
 
 # https://stackoverflow.com/questions/59345566/move-docker-volume-to-different-partition
+
+sudo nala install curl wget
+curl -sSL https://get.docker.com | sh
+sudo  dockerd-rootless-setuptool.sh install
+sudo sh -eux <<EOF
+apt-get install -y uidmap
+EOF
+
+sudo  dockerd-rootless-setuptool.sh install
+sudo sudo  dockerd-rootless-setuptool.sh install
+dockerd-rootless-setuptool.sh install
