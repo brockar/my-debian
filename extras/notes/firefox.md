@@ -15,3 +15,4 @@ curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme
 browser.tabs.loadDivertedInBackground "true"
 browser.tabs.loadInBackground "false"
 
+https://dev.to/msugakov/taking-firefox-memory-usage-under-control-on-linux-4b02
