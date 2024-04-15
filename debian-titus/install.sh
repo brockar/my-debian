@@ -21,7 +21,7 @@ cp $builddir/bg.jpg /home/$username/Pictures/backgrounds/
 chown -R $username:$username /home/$username
 
 # Installing Essential Programs
-nala install feh kitty thunar lxpolkit x11-xserver-utils unzip build-essential libx11-dev libxft-dev libxinerama-dev -y #pulseaudio pavucontrol
+nala install kitty thunar lxpolkit x11-xserver-utils unzip build-essential libx11-dev libxft-dev libxinerama-dev -y #pulseaudio pavucontrol
 # Installing Other less important Programs
 nala install flameshot psmisc mangohud lxappearance papirus-icon-theme fonts-noto-color-emoji -y
 
