@@ -8,7 +8,7 @@ gfx.webrender.all="true"
 
 add to launcher
 /usr/share/applications/firefox.desktop
-Exec= env MOZ_X11_EGL=1 firefox %u
+Exec=env MOZ_X11_EGL=1 firefox %u
 
 # adwaita theme
 curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
