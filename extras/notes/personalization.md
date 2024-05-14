@@ -22,6 +22,7 @@ Activate the windows menu = Disable
 flameshot gui = Shift + Super + S 
 gnome-terminal = Super +  Shift + X
 kitty = Super + X
+simplemoji --show-search -t medium = Super + .
 
 ## Extensions
 Clipboard Indicator
@@ -44,4 +45,8 @@ GRUB_GFXMODE="1368x768"
 and
 
 sudo update-grub
+
+# Fonts
+`~/.config/fontconfig/fonts.conf`
+https://forum.endeavouros.com/t/tip-enable-colour-emojis/6210
 
