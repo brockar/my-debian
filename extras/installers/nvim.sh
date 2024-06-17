@@ -6,10 +6,10 @@ home=/home/$usr
 #############################################################################################################
 ## NVIM
 sudo rm /usr/local/bin/nvim -f
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage $dir/
-chmod u+x $dir/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
 #sudo ln -s $dir/nvim.appimage /usr/local/bin/nvim
-sudo mv $dir/nvim.appimage /usr/local/bin/nvim
+sudo mv nvim.appimage /usr/local/bin/nvim
 
 # ## LazyVIM
 # # required
@@ -23,7 +23,6 @@ git clone https://github.com/LazyVim/starter $home/.config/nvim
 rm -rf $home/.config/nvim/.git
 ## Clipboard for lazyVim
 sudo nala install xclip -y
-
 
 ## Lazy git
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')

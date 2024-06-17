@@ -4,6 +4,6 @@ if [ $(id -u) -ne 0]; then
 	exit
 fi
 
-wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.11.1/fastfetch-linux-x86_64.deb
-sudo apt install ./fastfetch-linux-x86_64.deb
-sudo rm ./fastfetch-linux-x86_64.deb
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.15.0/fastfetch-linux-amd64.deb
+sudo apt install ./fastfetch-linux-amd64.deb
+sudo rm ./fastfetch-linux-amd64.deb
