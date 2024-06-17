@@ -1,12 +1,14 @@
 #!/bin/bash
 EXT_LIST=(
-	blur-my-shell@aunetx
-	dash-to-dock@micxgx.gmail.com
-	clipboard-indicator@tudmotu.com
 	freon@UshakovVasilii_Github.yahoo.com
-	trayIconsReloaded@selfmade.pl
+	blur-my-shell@aunetx
+	ControlBlurEffectOnLockScreen@pratap.fastmail.fm
+	appindicatorsupport@rgcjonas.gmail.com
+	azwallpaper@azwallpaper.gitlab.com
+	dash-to-dock@micxgx.gmail.com
 	gnome-ui-tune@itstime.tech
-	emoji-copy@felipeftn
+	pano@elhan.io
+	user-theme@gnome-shell-extensions.gcampax.github.com
 )
 for i in "${EXT_LIST[@]}"; do
 	busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s ${i}
