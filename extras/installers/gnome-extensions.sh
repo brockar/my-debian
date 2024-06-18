@@ -13,6 +13,8 @@ EXT_LIST=(
 	Rounded_Corners@lennart-k
 	caffeine@patapon.info
 	quick-settings-tweaks@qwreey
+	tilingshell@ferrarodomenico.com
+	weatheroclock@CleoMenezesJr.github.io
 )
 for i in "${EXT_LIST[@]}"; do
 	busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s ${i}
