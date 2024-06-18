@@ -57,14 +57,17 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 ```
 
-`sudo chmod 644 /etc/systemd/system/nvidia-powerlimit.service`
-`sudo systemctl daemon-reload`
-`sudo systemctl enable nvidia-powerlimit.service`
-`sudo reboot now`
+```
+sudo chmod 644 /etc/systemd/system/nvidia-powerlimit.service
+sudo systemctl daemon-reload
+sudo systemctl enable nvidia-powerlimit.service
+```
 
 ---
 # Thermal
-on sudo crontab
+on 
+`sudo crontab -e`
+
 @reboot nvidia-settings -V -c :0 -a '[gpu:0]/GPUFanControlState=1' -a '[fan:0]/GPUTargetFanSpeed='"50" -a '[fan:1]/GPUTargetFanSpeed='"50"
 
 
