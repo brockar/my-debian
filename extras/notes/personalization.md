@@ -46,6 +46,8 @@ and
 
 sudo update-grub
 
+## Order on /boot/grub/grub.cfg
+
 # Fonts
 `~/.config/fontconfig/fonts.conf`
 https://forum.endeavouros.com/t/tip-enable-colour-emojis/6210
