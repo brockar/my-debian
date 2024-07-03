@@ -18,9 +18,12 @@ to
 GRUB_TIMEOUT=0
 GRUB_CMDLINE_LINUX_DEFAULT="quiet spash"
 
-`sudo update grub`
+`sudo update-grub`
+
+# SMB
+https://ubuntu.com/tutorials/install-and-configure-samba#3-setting-up-samba
 
 # Red
 https://jlsmorilloblog.wordpress.com/2017/06/25/montar-carpeta-de-red-en-linux/
-
 https://odiseageek.es/posts/montar-unidades-smb-o-cifs-en-linux-con-mount-o-fstab/
+
