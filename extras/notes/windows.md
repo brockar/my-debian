@@ -29,13 +29,13 @@ sudo apt install docker-ce docker-ce-cli containerd.io
 
 sudo usermod -aG docker $USER
 
-# https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
+#https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
 
-# Network (un bardo)
+# WSL Port Forward (un bardo)
 
-# https://superuser.com/questions/1582234/make-ip-address-of-wsl2-static
-
-# https://learn.microsoft.com/en-us/windows/wsl/networking
+#https://superuser.com/questions/1582234/make-ip-address-of-wsl2-static  
+#https://dev.to/vishnumohanrk/wsl-port-forwarding-2e22  
+#https://learn.microsoft.com/en-us/windows/wsl/networking
 
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=(wsl hostname -I).split(" ")[0]
 
