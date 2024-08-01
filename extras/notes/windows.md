@@ -37,6 +37,8 @@ sudo usermod -aG docker $USER
 #https://dev.to/vishnumohanrk/wsl-port-forwarding-2e22  
 #https://learn.microsoft.com/en-us/windows/wsl/networking
 
+run `sudo apt install net-tools`
+
 ## Mode 1
 
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=(wsl hostname -I).split(" ")[0]
@@ -108,5 +110,3 @@ Start-Service ssh-agent
 Get-Service ssh-agent
 
 ---
-
-sudo apt install net-tools
