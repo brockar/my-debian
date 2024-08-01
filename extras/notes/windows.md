@@ -55,3 +55,6 @@ Or the name of your distro
 or u can create a deb.bat 
 wsl.exe -d Debian
 
+---
+
+Install net-tools 
