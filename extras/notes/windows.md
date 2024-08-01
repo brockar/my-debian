@@ -37,6 +37,8 @@ sudo usermod -aG docker $USER
 #https://dev.to/vishnumohanrk/wsl-port-forwarding-2e22  
 #https://learn.microsoft.com/en-us/windows/wsl/networking
 
+## Mode 1
+
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=(wsl hostname -I).split(" ")[0]
 
 on rtorrent.ps1:
@@ -48,13 +50,52 @@ on Admin Powershell:
 $trigger = New-JobTrigger -AtStartup -RandomDelay 00:00:15
 Register-ScheduledJob -Trigger $trigger -FilePath C:\Users\marti\rtorrent.ps1 -Name RouteRTorrent
 
+## Mode 2
+
+make and `network.ps1` and add
+
+```
+If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+  $arguments = "& '" + $myinvocation.mycommand.definition + "'"
+  Start-Process powershell -Verb runAs -ArgumentList $arguments
+  Break
+}
+
+$remoteport = bash.exe -c "ifconfig eth0 | grep 'inet '"
+$found = $remoteport -match '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}';
+
+if ($found) {
+  $remoteport = $matches[0];
+}
+else {
+  Write-Output "IP address could not be found";
+  exit;
+}
+
+$ports = @(80,9696,7878,5055,8989,8081,8191);
+
+for ($i = 0; $i -lt $ports.length; $i++) {
+  $port = $ports[$i];
+  Invoke-Expression "netsh interface portproxy delete v4tov4 listenport=$port";
+  Invoke-Expression "netsh advfirewall firewall delete rule name=$port";
+
+  Invoke-Expression "netsh interface portproxy add v4tov4 listenport=$port connectport=$port connectaddress=$remoteport";
+  Invoke-Expression "netsh advfirewall firewall add rule name=$port dir=in action=allow protocol=TCP localport=$port";
+}
+
+Invoke-Expression "netsh interface portproxy show v4tov4";
+```
+
+after that, run the script with Admin Powershell `./network.ps1`
+
+# Autostart WSL
+
 on Win + R => shell:common startup
 create a file.vbs with
 set ws=wscript.CreateObject("wscript.shell")
 ws.run "wsl -d Debian", 0
 
 Or the name of your distro
-
 or u can create a deb.bat
 wsl.exe -d Debian
 
@@ -68,4 +109,4 @@ Get-Service ssh-agent
 
 ---
 
-Install net-tools
+sudo apt install net-tools
