@@ -6,7 +6,7 @@ rusenala="/root/.use-nala"
 ubashrc="/home/$username/.bashrc"
 rbashrc="/root/.bashrc"
 if [ ! -f "$usenala" ]; then
-cat << \EOF > "$usenala"
+  cat <<\EOF >"$usenala"
 apt() {
   command nala "$@"
 }
@@ -19,7 +19,7 @@ sudo() {
   fi
 }
 EOF
-cat << EOF >> "$ubashrc"
+  cat <<EOF >>"$ubashrc"
 if [ -f "$usenala" ]; then
         . "$usenala"
 fi
@@ -27,12 +27,12 @@ EOF
 fi
 
 if [ ! -f "$rusenala" ]; then
-cat << \EOF > "$rusenala"
+  cat <<\EOF >"$rusenala"
 apt() {
   command nala "$@"
 }
 EOF
-cat << EOF >> "$rbashrc"
+  cat <<EOF >>"$rbashrc"
 if [ -f "$rusenala" ]; then
         . "$rusenala"
 fi
