@@ -41,7 +41,7 @@ fi
 ### Install Apps
 nala update && nala upgrade -y
 
-for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload timeshift gparted gnome-shell-extension-manager htop btop tree tldr helvum; do
+for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload pipewire wireplumber pavucontrol helvum build-essential htop btop tree tldr ; do
   nala install $pkg -y
 done
 
@@ -55,9 +55,9 @@ $dir/extras/installers/auto/brave.sh
 $dir/extras/installers/auto/code.sh
 ## NVIM
 $dir/extras/installers/auto/nvim.sh
-## Enable wireplumber
--u $username systemctl --user enable wireplumber.service
 
+## Enable wireplumber
+sudo -u $username systemctl --user enable wireplumber.service
 
 ## QEMU and KVM
 echo -e "\n\n\nInstall QEMU? \n\n1. YES \n2. NO [Default]"

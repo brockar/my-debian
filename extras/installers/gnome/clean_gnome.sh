@@ -10,3 +10,5 @@ else
   nala remove gnome-sound-recorder gnome-text-editor gnome-maps shotwell sane-airscan evolution rhythmbox transmission totem gnome-music -y #transmission-gtk transmission-common
   nala autoremove -y
 fi
+
+sudo apt nala install gparted gnome-shell-extension-manager -y
