@@ -43,3 +43,7 @@ Terminal=false
 Categories=Education;Languages;Java;
 
 update-desktop-database ~/.local/share/applications
+
+desktop-file-validate beeper.desktop
+
+xdg-desktop-menu install beeper.desktop

@@ -45,7 +45,7 @@ for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload pipewire wi
   nala install $pkg -y
 done
 
-flatpak install flathub md.obsidian.Obsidian com.discordapp.Discord com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop com.rtosta.zapzap org.videolan.VLC -y
+flatpak install flathub md.obsidian.Obsidian dev.vencord.Vesktop com.prusa3d.PrusaSlicer io.github.vikdevelop.SaveDesktop com.rtosta.zapzap org.videolan.VLC -y
 
 ## Firefox
 $dir/extras/installers/auto/firefox-deb.sh
