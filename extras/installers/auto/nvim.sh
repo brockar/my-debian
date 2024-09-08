@@ -26,8 +26,8 @@ sudo nala install xclip -y
 
 ## Lazy git
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" $dir/
-
-tar xf $dir/lazygit.tar.gz $dir/lazygit
-sudo install $dir/lazygit /usr/local/bin
-rm $dir/lazygit.tar.gz
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+rm lazygit -rf
+rm lazygit.tar.gz
