@@ -1,14 +1,14 @@
 #!/bin/bash
 #Check if user is root
-if [ $(id -u) -ne 0 ]; then
+if [ "$(id -u)" -ne 0 ]; then
   echo "Please run as root"
   exit
 fi
 #vars
 usr=$(id -u -n 1000)
 dir=$(pwd)
-home=/home/$usr
 
+#############################################################################################################
 # Update and Upgrade
 apt update && apt upgrade -y
 
@@ -18,7 +18,8 @@ apt install nala git -y
 #############################################################################################################
 ## Install System apps
 # Flatpak
-nala install flatpak -y (not necesary)
+nala install flatpak -y 
+
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
     nala install gnome-software-plugin-flatpak -y
 elif [[ "$XDG_CURRENT_DESKTOP" == *"KDE"* ]]; then
@@ -28,6 +29,7 @@ else
 fi
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install com.github.tchx84.Flatseal
 
 #############################################################################################################
 ## CLEAN Gnome
@@ -57,13 +59,14 @@ $dir/extras/installers/auto/code.sh
 $dir/extras/installers/auto/nvim.sh
 
 ## Enable wireplumber
-sudo -u $username systemctl --user enable wireplumber.service
+sudo -u $usr systemctl --user enable wireplumber.service
+i
 
 ## QEMU and KVM
 echo -e "\n\n\nInstall QEMU? \n\n1. YES \n2. NO [Default]"
-read respuesta
+read respuesta -r
 if [ "$respuesta" -eq 1 ]; then
-  echo "\nInstalling QEMU..."
+  printf "\nInstalling QEMU..."
   nala install qemu-kvm virt-manager virtinst spice-vdagent libvirt-clients bridge-utils libvirt-daemon-system -y
   systemctl enable --now libvirtd
   systemctl start libvirtd
@@ -74,7 +77,7 @@ fi
 
 ## Docker
 echo -e "\n\n\nInstall Docker?\n\n1. YES \n2. NO [Default]\n"
-read respuesta
+read respuesta -r 
 if [ "$respuesta" -eq 1 ]; then
   $dir/extras/installers/auto/docker.sh
 fi
