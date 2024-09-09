@@ -19,7 +19,7 @@ Show the overview = Disable
 Activate the windows menu = Disable
 
 ### Custom Shortcuts
-flameshot gui = Shift + Super + S 
+flameshot gui = Shift + Super + S (if doesn't work, try `script --command "flameshot gui" /dev/null`)
 gnome-terminal = Super +  Shift + X
 kitty = Super + X
 simplemoji --show-search -t medium = Super + .
