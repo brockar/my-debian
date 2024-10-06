@@ -1,7 +1,4 @@
-- [ ] mirar https://www.chezmoi.io/
-- [ ] gnome auto personalization https://linux.m2osw.com/transform-gnome-settings-command-lines
+- [ ] mirar <https://www.chezmoi.io/>
 - [ ] errors on gnome-cust.sh
 - [ ] error on fastfetch.sh
 - [ ] fonts
-- [ ] echo de gnome al final y no en el medio
-- [ ] flatpak typo
