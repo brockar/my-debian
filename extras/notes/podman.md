@@ -41,7 +41,7 @@ unqualified-search-registries = ["docker.io"]
 ### Volumes
 
 Keep in mind that depending on how you have configured your volumes, you might need to create backups.  
-If your volumes are managed by Docker, make sure to back them up before transitioning. You can find instructions on how to back up Docker volumes [here](https://www.docker.com/blog/back-up-and-share-docker-volumes-with-this-extension/).  
+If your volumes are managed by Docker, make sure to back them up before transitioning. You can find instructions on how to back up Docker volumes [here](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).  
 If your volumes are stored on system paths, there’s nothing you need to do—everything will work as expected without any additional steps.  
 
 ### Docker compose
