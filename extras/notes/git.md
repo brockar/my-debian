@@ -8,7 +8,7 @@
  To copy
  xclip < brockargh.pub
 
- eval "ssh-agent"
+ eval "ssh-agent -s"
  ssh-add gh
 
  ssh -T git@github.com 
