@@ -5,7 +5,7 @@ sudo mkdir /opt/your_app
 sudo mv ~/Downloads/your_app.AppImage /opt/your_app/your_app.AppImage
 sudo mv ~/Downloads/your_app.png /opt/your_app/your_app.png
 
-sudo nvim /local/share/applications/your_app.desktop
+sudo nvim ~/local/share/applications/your_app.desktop
 
 # Note: Only Type and Name are required.
 

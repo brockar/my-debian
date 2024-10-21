@@ -70,6 +70,10 @@ on
 
 @reboot nvidia-settings -V -c :0 -a '[gpu:0]/GPUFanControlState=1' -a '[fan:0]/GPUTargetFanSpeed='"50" -a '[fan:1]/GPUTargetFanSpeed='"50"
 
+---
+# Wayland
+For wayland use
+[tuxclocker](https://github.com/Lurkki14/tuxclocker)
 
 sources:
 - https://wiki.debian.org/NvidiaGraphicsDrivers#Debian_Unstable_.22Sid.22
