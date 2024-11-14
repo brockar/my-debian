@@ -18,14 +18,14 @@ apt install nala git -y
 #############################################################################################################
 ## Install System apps
 # Flatpak
-nala install flatpak -y 
+nala install flatpak -y
 
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
-    nala install gnome-software-plugin-flatpak -y
+  nala install gnome-software-plugin-flatpak -y
 elif [[ "$XDG_CURRENT_DESKTOP" == *"KDE"* ]]; then
-    apt install plasma-discover-backend-flatpak
+  apt install plasma-discover-backend-flatpak
 else
-    echo "No se pudo determinar el entorno de escritorio."
+  echo "No se pudo determinar el entorno de escritorio."
 fi
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -43,7 +43,7 @@ fi
 ### Install Apps
 nala update && nala upgrade -y
 
-for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload pipewire wireplumber pavucontrol helvum build-essential htop btop tree tldr ; do
+for pkg in wget gpg curl rclone thunderbird zoxide trash-cli preload pipewire wireplumber pavucontrol helvum build-essential htop btop tree tldr; do
   nala install $pkg -y
 done
 
@@ -77,7 +77,7 @@ fi
 
 ## Docker
 echo -e "\n\n\nInstall Docker?\n\n1. YES \n2. NO [Default]\n"
-read respuesta -r 
+read respuesta -r
 if [ "$respuesta" -eq 1 ]; then
   $dir/extras/installers/auto/docker.sh
 fi
