@@ -31,3 +31,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet spash"
 
 <https://jlsmorilloblog.wordpress.com/2017/06/25/montar-carpeta-de-red-en-linux/>
 <https://odiseageek.es/posts/montar-unidades-smb-o-cifs-en-linux-con-mount-o-fstab/>
+
+# mount ssh as local folder
+
+sudo mount svang:/mnt/disk1/data/media/ /home/ubuntu/docker/jelly/svdisk1
