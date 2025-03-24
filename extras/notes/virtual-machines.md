@@ -26,6 +26,7 @@ also install spice-vdagent on host
 
 if are on windows guest
 <https://www.youtube.com/watch?v=I_mF81k6oNc>
+<https://www.youtube.com/watch?v=7tqKBy9r9b4>
 
 ## Share folder qemu -> win guest
 
