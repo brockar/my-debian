@@ -34,4 +34,9 @@ install
 [virtio drivers](https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers)
 
 share the folder on hardware options in virt-manager
-start VirtIO-FS Service on windows guest
+start VirtIO-FS Service on windows guest (can set autostart)
+
+## Connect to VM with RDP
+
+`yay -S remmina`
+and connect with the IP
