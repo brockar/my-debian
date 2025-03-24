@@ -27,6 +27,11 @@ also install spice-vdagent on host
 if are on windows guest
 <https://www.youtube.com/watch?v=I_mF81k6oNc>
 
+## Share folder qemu -> win guest
+
 install
 [winfsp](https://winfsp.dev/rel/)
 [virtio drivers](https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers)
+
+share the folder on hardware options in virt-manager
+start VirtIO-FS Service on windows guest
