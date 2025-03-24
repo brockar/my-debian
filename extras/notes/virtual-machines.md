@@ -14,9 +14,9 @@ also install spice-vdagent on host
 
 # <https://www.youtube.com/watch?v=vYQ9Bkv7VG4>
 
-# Create volumes with phisical disk
+## Create volumes with phisical disk
 
-# sudo fdisk -l
+`sudo fdisk -l`
 
 # To view volumes and create a partition
 
@@ -26,3 +26,7 @@ also install spice-vdagent on host
 
 if are on windows guest
 <https://www.youtube.com/watch?v=I_mF81k6oNc>
+
+install
+[winfsp](https://winfsp.dev/rel/)
+[virtio drivers](https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers)
